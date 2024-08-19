@@ -55,11 +55,12 @@ function App() {
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   return (
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
-      <h1 className='text-white text-center my-3'>Password generator</h1>
+    <div  className="bg-gradient-to-r from-gray-900 via-blue-950 to-black bg-[length:200%_200%] animate-gradient-x min-h-screen flex items-center justify-center">
+    <div className="w-full max-w-md  mx-auto  rounded-lg px-4  py-3 my-8 bg-transparent text-blue-500">
+      <h1 className='text-yellow-50 font-bold text-center my-3'>Generate Password</h1>
 
       {/* Password input field and copy button */}
-      <div className="flex shadow rounded-lg overflow-hidden mb-4">
+      <div className="flex shadow  rounded-lg overflow-hidden mb-4">
         <input
           type="text"
           value={password}
@@ -89,7 +90,7 @@ function App() {
           />
           <label>Length: {length}</label>
         </div>
-        <div className="flex items-center gap-x-1">
+        <div className="flex items-center  gap-x-1">
           <input
             type="checkbox"
             defaultChecked={numberAllowed}
@@ -108,6 +109,7 @@ function App() {
           <label htmlFor="characterInput">Characters</label>
         </div>
       </div>
+    </div>
     </div>
   );
 }
